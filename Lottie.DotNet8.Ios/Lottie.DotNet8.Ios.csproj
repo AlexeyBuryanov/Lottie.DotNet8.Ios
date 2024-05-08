@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-ios</TargetFrameworks>
+    <AssemblyName>Lottie.DotNet8.Ios</AssemblyName>
+    <RootNamespace>Lottie.DotNet8.Ios</RootNamespace>
+    <Description>Render After Effects animations natively on iOS. Port for .NET 8.</Description>
+    <Version>1.0.0</Version>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+    <Authors>Oleksii Burianov</Authors>
+    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.Ios.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="libLottie-ios.a">
+      <Kind>Static</Kind>
+      <Frameworks>UIKit</Frameworks>
+      <IsCxx>True</IsCxx>
+      <ForceLoad>True</ForceLoad>
+      <LinkerFlags>-ObjC</LinkerFlags>
+      <SmartLink>True</SmartLink>
+    </NativeReference>
+  </ItemGroup>
+
+</Project>
