@@ -3,16 +3,34 @@
     <TargetFrameworks>net8.0-ios</TargetFrameworks>
     <AssemblyName>Lottie.DotNet8.Ios</AssemblyName>
     <RootNamespace>Lottie.DotNet8.Ios</RootNamespace>
+	<PackageId>Lottie.DotNet8.Ios</PackageId>
     <Description>Render After Effects animations natively on iOS. Port for .NET 8.</Description>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Oleksii Burianov</Authors>
     <PackageProjectUrl>https://github.com/AlexeyBuryanov/Lottie.DotNet8.Ios</PackageProjectUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<RepositoryUrl>https://github.com/AlexeyBuryanov/Lottie.DotNet8.Ios</RepositoryUrl>
+	<PackageTags>net8-ios;ios;lottie</PackageTags>
+    <Authors>Oleksii Burianov</Authors>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.Ios.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
