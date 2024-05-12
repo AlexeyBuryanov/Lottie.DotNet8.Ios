@@ -4,6 +4,8 @@ Lottie is a mobile library for iOS that parses [Adobe After Effects](http://www.
 
 This library is a port of https://github.com/Baseflow/LottieXamarin/ to .NET 8 but limited to iOS.
 
+NuGet: [![Static Badge](https://img.shields.io/badge/Lottie.DotNet8.Ios-latest-blue)](https://www.nuget.org/packages/Lottie.DotNet8.Ios/)
+
 ## Using Lottie for net8-ios
 Lottie supports iOS 8 and above.
 Lottie animations can be loaded from bundled JSON or from a URL
@@ -194,12 +196,6 @@ If your animation will be frequently reused, `LOTAnimationView` has an built in 
 1. If the composition has no masks or mattes then the performance and memory overhead should be quite good. No bitmaps are created and most operations are simple canvas draw operations.
 2. If the composition has mattes, 2-3 bitmaps will be created at the composition size. The bitmaps are created automatically by lottie when the animation view is added to the window and recycled when it is removed from the window. For this reason, it is not recommended to use animations with masks or mattes in a RecyclerView because it will cause significant bitmap churn. In addition to memory churn, additional bitmap.eraseColor() and canvas.drawBitmap() calls are necessary for masks and mattes which will slow down the performance of the animation. For small animations, the performance hit should not be large enough to be obvious when actually used.
 4. If you are using your animation in a list, it is recommended to use a CacheStrategy in LottieAnimationView.setAnimation(String, CacheStrategy) so the animations do not have to be deserialized every time.
-
-## Contributing
-Contributors are more than welcome. Just upload a PR with a description of your changes.
-Lottie uses [Facebook screenshot tests for Android](https://github.com/facebook/screenshot-tests-for-android) to identify pixel level changes/breakages. Please run `./gradlew --daemon recordMode screenshotTests` before uploading a PR to ensure that nothing has broken. Use a Nexus 5 emulator running Lollipop for this. Changed screenshots will show up in your git diff if you have.
-
-If you would like to add more JSON files and screenshot tests, feel free to do so and add the test to `LottieTest`.
 
 ## Issues or feature requests?
 File github issues for anything that is unexpectedly broken. If an After Effects file is not working, please attach it to your issue. Debugging without the original file is much more difficult.
