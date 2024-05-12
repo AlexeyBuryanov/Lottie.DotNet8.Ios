@@ -4,7 +4,7 @@ Lottie is a mobile library for iOS that parses [Adobe After Effects](http://www.
 
 This library is a port of https://github.com/Baseflow/LottieXamarin/ to .NET 8 but limited to iOS.
 
-NuGet: [![Static Badge](https://img.shields.io/badge/Lottie.DotNet8.Ios-latest-blue)](https://www.nuget.org/packages/Lottie.DotNet8.Ios/)
+[![Static Badge](https://img.shields.io/badge/NuGet-Lottie.DotNet8.Ios-blue)](https://www.nuget.org/packages/Lottie.DotNet8.Ios/)
 
 ## Using Lottie for net8-ios
 Lottie supports iOS 8 and above.
